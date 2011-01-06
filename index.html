@@ -1,0 +1,187 @@
+
+<html>
+<head>
+    <style type="text/css">
+        .style2
+        {
+            color: #339933;
+        }
+        .style3
+        {
+            font-size: larger;
+        }
+        .style4
+        {
+            color: #333333;
+        }
+        .style5
+        {
+            width: 143px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: x-small;
+        }
+        .style6
+        {
+            width: 369px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: x-small;
+        }
+    </style>
+</head>
+<body>
+
+<h2>
+	<div style="width: 100%; float: left;">
+    <div style="float: left; width: 50%" class="style2">Bing Maps Module for Drupal</div>
+    <div style="float: left; width: 50%;"><img src="images/logo_inside.gif" alt=""/></div>
+    </div>        
+</h2>
+
+    <span class="style4">The Bing Maps Module for Drupal allows users to include 
+    Microsoft Bing Maps in their content pages like Articles and Pages. </span> <br class="style4" />
+    <span class="style4">Users can display a map, add a pushpin at a 
+    desired location on the map and show driving directions between two locations.</span><br 
+        class="style4" /> 
+    <span class="style4">They can also save the map properties and pushpin details in 
+    the Drupal backend database.</span><br />
+    <br />
+    <span class="style4">This component works on Drupal 7 version. It uses the Bing Maps 
+    PHP SDK 1.0 available <a href="https://github.com/mindtree/BingMapsPHPSDK">here</a>.<br />
+    <br />
+    <span class="style3">Contributors</span><br />
+    <span class="style4"><a href="http://www.mindtree.com">Mindtree Limited</a></span><br class="style4" />
+    <br />    
+    <span class="style3">Download</span><br />
+    The latest version of the Bing Maps module can be downloaded from the
+    <a href="https://github.com/mindtree/BingMapsDrupal">project site</a>.<br />
+    <br />
+    </span><span class="style3">License</span><br />
+    <span class="style4">This software is released free of charge under the terms of the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License v2</a>. 
+    The license document is available <a href="license">here</a>.</span><br />
+    <br />
+    <html>
+
+    <span class="style3">
+        Install</span><br />
+    <span class="style4">To install the module, download the file bing_maps.zip and 
+    extract the contents to Drupal folder sites/all/modules/bing_maps. 
+    <br />
+    Also download the file bing_button.zip and extract the contents to Drupal folder 
+    sites/all/modules/bing_button. Login as the Drupal 
+    <br />
+   administrator, under the Modules page you will find the two Bing Maps related 
+    modules, enable both the modules and click on the
+    <br />
+    Save Configuration button. <br />
+    <br />
+    Before using the Bing Maps module, it has to be configured. The Bing Maps 
+    administration page can be accessed from the Modules 
+      <br />
+    page by clicking on the Configure link beside the Bing Maps module. Here you can configure the width and height 
+    of the map and the 
+    <br />
+   zoom level. Right clicking on the map displays a menu to set the default location of the map. You will need a 
+    Bing Maps Key for 
+    <br />
+    working with Bing Maps.
+    You can obtain a Bing Maps Key from Microsoft from the web page
+    <a href="https://www.bingmapsportal.com/">https://www.bingmapsportal.com</a>.<br />
+    The administration page also allows the administrator to associate Bing Maps 
+    with available content types. 
+    <br />
+    <br />
+    Here is a screenshot of the Bing Maps administration page. <br />
+    <img src="images/Thumb/administration.jpg" alt="" onclick="window.open('images/administration.jpg');"/>
+    <br />
+    <br />
+    <span class="style3">
+       Usage of the module within content types</span></span><br />
+    <span class="style4">To display a map in your content, you need to place the 
+    {BingMap} macro in the content (Article, Basic Page) text. The macro can be 
+    <br />
+    generated
+    by using the &#39;Generate Bing Maps Macro&#39; button in the Create content 
+    (Article, Basic Page) page. <br />
+    <img src="images/Thumb/contentcreation.jpg" alt="" onclick="window.open('images/contentcreation.jpg');"/>
+    <br /><br />
+    To view the button during content 
+    creation, it has to be associated with content types like Article and Basic Page as shown in the<br />
+    below screenshot. <br />
+    <img src="images/Thumb/configurebingbutton.jpg" alt="" onclick="window.open('images/configurebingbutton.jpg');"/>
+   
+    <br /><br />
+    The macro generation page allows users to override the width, height, zoom level 
+    and default location of the map. Users can display<br />
+    driving directions between two locations and add one or more pushpins on the 
+    map. Here is a screenshot of the macro generation page.<br />
+    <img src="images/Thumb/generatemacro.jpg" alt="" onclick="window.open('images/generatemacro.jpg');"/>
+    <br />
+    <br />
+    After the macro is generated, the page will look something like this.<br />
+    <img src="images/Thumb/generatedmacro.jpg" alt="" onclick="window.open('images/generatedmacro.jpg');"/>
+    <br />
+    <br />
+    The {BingMap} macro supports the following attributes:</span><p class="style3">
+        <table bgcolor="Azure" border="2" style="width: 54%;">
+            <tr>
+                <td class="style5">
+                    defaultlocation</td>
+                <td class="style6">
+                    Address of the default map location</td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    width</td>
+                <td bgcolor="Azure" class="style6">
+                    Width of the map in pixels</td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    height</td>
+                <td bgcolor="Azure" class="style6">
+                    Height of the map in pixels</td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    zoomlevel</td>
+                <td class="style6">
+                    Zoom level of the map in the range 1 to 19</td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    pushpins</td>
+                <td class="style6">
+                    List of pushpins to be displayed separated by a<strong> |</strong> symbol. Each 
+                    pushpin should be in the form <strong>title;description;address</strong><br />
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    direction</td>
+                <td class="style6">
+                    Driving directions between two addresses in the form <strong>
+                  fromaddress;toaddress</strong></td>
+            </tr>
+        </table>
+    </p>
+        The generated macro should be copied to the content text by clicking on the 'Apply' button 
+        in the macro generation page after 
+        setting <br /> the content Text format to &#39;Full HTML&#39;. To enable the content 
+    page to display the map, the &#39;Full HTML&#39; Text format should be configured from <br />
+    Configuration -&gt; Text formats -&gt; Configure 
+    as shown in the below screenshot to recognize the Bing Maps macro.<br />
+    <img src="images/Thumb/recognizebingmapsmacro.jpg" alt="" onclick="window.open('images/recognizebingmapsmacro.jpg');"/>
+    <br />
+    <br />
+        Once the content (Article, 
+        Basic Page) has been saved with the {BingMap} macro, a map will 
+        be displayed in its place on viewing the content.<br /><br />
+        A saved Drupal Basic Page containing a Bing Map will look something like this.<br />
+        <img src="images/Thumb/article.jpg" alt="" onclick="window.open('images/article.jpg');"/>
+        <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+
+</body>
+</html>
