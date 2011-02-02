@@ -1,0 +1,66 @@
+Bing Maps Module for Drupal
+===========================
+
+The Bing Maps Module for Drupal allows users to include Microsoft Bing Maps in their content pages like Articles and Pages. 
+Users can display a map, add a pushpin at a desired location on the map and show driving directions between two locations.
+They can also save the map properties and pushpin details in the Drupal backend database.
+
+This module works on Drupal 7 version. It uses the Bing Maps PHP SDK 1.0 available here.
+The module is supported on Internet Explorer 8.0, Google Chrome 8.0 and Mozilla Firefox 3.6 browsers. 
+
+
+Installation
+============
+
+To install the module, download the file bing_maps.zip and extract the contents to Drupal folder sites/all/modules. 
+This module can also be installed from the Module Upload UI. Next login as the Drupal administrator, under the Modules page 
+you will find Bing Maps module, enable the module and click on the Save Configuration button. 
+
+Before using the Bing Maps module, it has to be configured. The Bing Maps administration page can be accessed from the Modules 
+page by clicking on the Configure link beside the Bing Maps module. Here you can configure the width and height of the map and the 
+zoom level. Right clicking on the map displays a menu to set the default location of the map. You will need a Bing Maps Key for 
+working with Bing Maps. You can obtain a Bing Maps Key from Microsoft from the web page https://www.bingmapsportal.com.
+The administration page also allows the administrator to associate Bing Maps with available content types. 
+
+
+
+Usage
+=====
+
+To display a map in your content, you need to place the {BingMap} macro in the content (Article, Basic Page) text. 
+Also, the Text Format of the content (Article, Basic Page) should be set to 'Full HTML'. The macro can be generated 
+by using the 'Generate Bing Maps Macro' button in the Create content (Article, Basic Page) page. 
+ 
+
+The 'Generate Bing Maps Macro' button is automatically associated with all existing content types like Article and Basic Page. 
+To view the button during creation of newly added content types, it has to be associated with the content types.
+ 
+
+The macro generation page allows users to override the width, height, zoom level and default location of the map. Users can display
+driving directions between two locations and add one or more pushpins on the map. 
+ 
+ 
+
+The {BingMap} macro supports the following attributes:
+defaultlocation 	-	Address of the default map location 
+width 			-	Width of the map in pixels 
+height 			-	Height of the map in pixels 
+zoomlevel 		-	Zoom level of the map in the range 1 to 19 
+pushpins 		-	List of pushpins to be displayed separated by a | symbol. 
+				Each pushpin should be in the form title;description;address
+ 
+direction 		-	Driving directions between two addresses in the form fromaddress;toaddress 
+
+
+The generated macro should be copied to the content text by clicking on the 'Apply' button in the macro generation page. 
+Once the content (Article, Basic Page) has been saved with the {BingMap} macro, a map will be displayed in its place on viewing the content.
+
+
+
+
+License
+=======
+This library is released free of charge under the terms of the GNU General Public License v2.
+A copy of the license is available in the LICENSE file, included in the distribution.
+
+
